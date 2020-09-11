@@ -1,0 +1,8 @@
+<p>Adicione um novo usuario</p>
+<form [formGroup]="userForm" fxFlex="100">
+    Nome:<input type="text" formControlName="name">
+    Data de nascimento:<input type="date" formControlName="date">
+</form>
+<button (click)='onAddClick();'>
+    Adicionar
+</button>

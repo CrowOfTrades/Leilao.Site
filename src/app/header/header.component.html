@@ -1,0 +1,12 @@
+<section class="content">
+    <p>Bemvindo: {{name}}</p>
+    <p style="cursor:pointer" (click)="addNewUser()">Novo Usuário</p>
+    <p style="cursor:pointer" (click)="showUsers = !showUsers">Trocar usuário</p>
+
+    <div *ngIf="showUsers">
+        <div *ngFor="let user of userList" (click)="changeUser(user)">
+            <p>Nome: {{user.name}}</p>
+            <p>Data de nascimento: {{user.birthdate | date: 'dd/MM/yyyy'}}</p>
+        </div>
+    </div>
+</section>

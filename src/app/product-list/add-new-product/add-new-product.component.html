@@ -1,0 +1,8 @@
+<p>Adicione um novo produto</p>
+<form [formGroup]="productForm" fxFlex="100">
+    Nome:<input type="text" formControlName="name">
+    Preço:<input type="number" min=0 formControlName="price">
+</form>
+<button (click)='onAddClick();'>
+    Adicionar
+</button>
