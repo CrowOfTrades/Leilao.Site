@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AddNewProductComponent } from './add-new-product/add-new-product.component';
+import { NewBidComponent } from './new-bid/new-bid.component';
 import { Product, ProductService } from './product.service'
  
 @Component({
@@ -20,6 +21,14 @@ export class ProductListComponent implements OnInit {
 
   public addNewProduct(){
     let dialogRef = this.dialog.open(AddNewProductComponent, {width: '250px',})
+    dialogRef.afterClosed()
+      .subscribe(() =>
+      this.getProducts()
+      );
+  }
+
+  public bidProduct(product: Product){
+    let dialogRef = this.dialog.open(NewBidComponent, {width: '250px', data: product})
     dialogRef.afterClosed()
       .subscribe(() =>
       this.getProducts()

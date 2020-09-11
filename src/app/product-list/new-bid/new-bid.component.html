@@ -1,0 +1,7 @@
+<p>Adicione um novo lance para {{product.name}}</p>
+<form [formGroup]="bidForm" fxFlex="100">
+    Preço:<input type="number" min=0 formControlName="price">
+</form>
+<button (click)='onAddClick();'>
+    Adicionar
+</button>

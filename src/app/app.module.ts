@@ -12,6 +12,8 @@ import { AddNewProductComponent } from './product-list/add-new-product/add-new-p
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { AddNewUserComponent } from './header/add-new-user/add-new-user.component';
+import { BidListComponent } from './bid-list/bid-list.component';
+import { NewBidComponent } from './product-list/new-bid/new-bid.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { AddNewUserComponent } from './header/add-new-user/add-new-user.componen
     ProductListComponent,
     AddNewProductComponent,
     HeaderComponent,
-    AddNewUserComponent
+    AddNewUserComponent,
+    BidListComponent,
+    NewBidComponent
   ],
   imports: [
     BrowserModule,

@@ -21,7 +21,7 @@ export class AddNewUserComponent implements OnInit {
       name: new FormControl('', [
         Validators.required
       ]),
-      date: new FormControl('', [
+      birthdate: new FormControl('', [
         Validators.required
       ]),
     });

@@ -11,7 +11,7 @@
                 <div fxLayout="row wrap" (click)="addNewProduct();" class="product__box">
                     <h6 fxFlex.lg="100"> Adicionar novo Produto </h6>
                 </div>
-                <div fxLayout="row wrap" class="product__box" *ngFor="let product of ProductList">
+                <div fxLayout="row wrap" class="product__box" *ngFor="let product of ProductList" (click)="bidProduct(product);">
                     <h6 fxFlex.lg="70"> {{product.name}} </h6>
                     <h6 fxFlex.lg="30"> {{product.price}} </h6>
                 </div>

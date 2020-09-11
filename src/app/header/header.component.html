@@ -1,5 +1,8 @@
 <section class="content">
     <p>Bemvindo: {{name}}</p>
+    <p style="cursor:pointer" routerLink="/products">Produtos</p>
+    <p style="cursor:pointer" routerLink="/bids/{{_userService.LoggedUser.id}}">Meus Lances</p>
+    <p style="cursor:pointer" routerLink="/bids">Todos os Lances</p>
     <p style="cursor:pointer" (click)="addNewUser()">Novo Usuário</p>
     <p style="cursor:pointer" (click)="showUsers = !showUsers">Trocar usuário</p>
 
@@ -7,6 +10,7 @@
         <div *ngFor="let user of userList" (click)="changeUser(user)">
             <p>Nome: {{user.name}}</p>
             <p>Data de nascimento: {{user.birthdate | date: 'dd/MM/yyyy'}}</p>
+            <p>Idade: {{user.age}}</p>
         </div>
     </div>
 </section>

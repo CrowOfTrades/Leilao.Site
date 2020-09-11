@@ -55,4 +55,5 @@ export class User {
     public id: string;
     public name: string;
     public birthdate: number;
+    public age: number;
 }

@@ -1,0 +1,23 @@
+<section>
+    <div fxLayoutAlign="center none">
+        <div class="product__list">
+
+            <div fxLayout="row wrap" class="product__box">
+                <h6 fxFlex.lg="25"> O Que </h6>
+                <h6 fxFlex.lg="25"> Quem </h6>
+                <h6 fxFlex.lg="25"> Quanto </h6>
+                <h6 fxFlex.lg="25"> Quando </h6>
+            </div>
+
+            <div class="box__list">
+                <div fxLayout="row wrap" class="product__box" *ngFor="let bid of bidList">
+                    <h6 fxFlex.lg="25"> {{bid.productName}} </h6>
+                    <h6 fxFlex.lg="25"> {{bid.userName}} </h6>
+                    <h6 fxFlex.lg="25"> {{bid.price}} </h6>
+                    <h6 fxFlex.lg="25"> {{bid.createOn | date: 'dd/MM/yyyy'}} </h6>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
